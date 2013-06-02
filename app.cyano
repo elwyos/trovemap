@@ -1,0 +1,11 @@
+appname> Drifto
+mode: iphone5
+//mode: ipad
+//mode: oculus
+//mode: bigscreen
+splashpage> Default.png
+appstoreid> 654827542
+autocomms
+rsscaling: 1.0
+//roensachs: disable
+//resolution: 320 900

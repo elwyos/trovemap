@@ -1,0 +1,14 @@
+#!python
+#/////////////////////////////////////////////////////////////////
+Import('env')
+includepaths = [ '.', '/usr/include/SDL', '/usr/include/libpng12', '/usr/local/include/bullet']
+#/////////////////////////////////////////////////////////////////
+elccflags = '-ggdb -m32 -Wreturn-type -Werror=return-type -Wfloat-equal -pthread '
+elcppflags = '-ggdb -m32 -Wreturn-type -Werror=return-type -Wfloat-equal -pthread -std=c++0x '
+#/////////////////////////////////////////////////////////////////
+thefiles = ['processor.cpp'
+           ]
+#/////////////////////////////////////////////////////////////////
+moo = Object(thefiles, CPPPATH = includepaths, CCFLAGS = elccflags, CXXFLAGS = elcppflags, CC = env['CC'], CXX = env['CXX'])
+Return('moo')
+#/////////////////////////////////////////////////////////////////
